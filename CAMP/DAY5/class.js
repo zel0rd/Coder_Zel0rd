@@ -13,6 +13,10 @@ class Person{
     }
 }
 
+var test1 = new Person()
+var test2 = new Person()
+console.log("?class doesn't use to proto?")
+console.log(test1.speak === test2.speak)
 // const ellie = new Person('ellie',20);
 // console.log(ellie.name)
 // console.log(ellie.age)

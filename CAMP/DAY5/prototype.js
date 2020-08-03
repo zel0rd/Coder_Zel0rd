@@ -38,7 +38,7 @@ console.log(o.showHealth === o1.showHealth) // false
 function Health2(name, lastTime) {
     this.name = name;
     this.lastTime = lastTime;
-    Health.prototype.showHealth = function() {
+    Health2.prototype.showHealth = function() {
         return this.name + "님 오늘은 " + this.lastTime + "에 운동을 하셨네요!"
     }
 }
