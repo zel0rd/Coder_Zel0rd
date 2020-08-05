@@ -1,4 +1,5 @@
-const str = "[1123, [2,[3]],'hello', 'world', null]";
+// const str = "[1123, [2,[3]],'hello', 'world', null]";
+const str = "[1, [2,[3,[4,[5]]]],'hello', 'world', null]";
 // const str = '[123,"adfd",456]'
 // const str = "[123,'aaaddd',456]"
 const result = ArrayParser(str);
