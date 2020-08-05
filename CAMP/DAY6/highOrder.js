@@ -20,7 +20,7 @@ console.log(fun(1, () => 2))
 // 함수를 파라미터로 받는 함수
 function repeat(times, value){
     arr = [...Array(times).keys()]
-    arr2 = [...Array(10).keys()]
+    // arr2 = [...Array(10).keys()]
     // console.log(arr)
     // console.log(arr2)
     return [...Array(times).keys()].map(i=>value)
