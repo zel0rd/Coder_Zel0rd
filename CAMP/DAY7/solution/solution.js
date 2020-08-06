@@ -61,3 +61,37 @@ function lexer(a) {
 }
 
 //parser
+function parser(a) {
+    const arrayOpenCount = a.filter( ({type}) => type === "array").length;
+    const arrayCloseCount = a.filter( ({type}) => type === "arrayClose").length;
+    if(arrayOpenCount !== arrayCloseCount) throw new Error("배열이 잘 안닫힌거 같은데?")
+
+    const reuslt = {type:'root',child:[]};
+    const _stack = [];
+    for(el of a){
+        if(el.type ==="array") _stack.push(el);
+
+        if(el.type === "number" || el.type === "string" || el.type === "NULL"){
+            _stack[_stack.length-1].child.push(el);
+        }
+
+        if(el.type === "arrayClose"){
+            const currentStack = _stack.pop();
+            const _stackLength = _stack.length;
+            if(_stackLength === 0) result.child.push(currentStack)
+            else _stack[_stack.length-1].child.push(currentStack);
+        }
+    }
+    return reuslt;
+}
+
+try {
+    // const d = "[[1,[2,[3]], 'hello] world']";
+    const d = "[[1,[2,[3]], 'hello','world',null]";
+    const tokens = tokenizer(d);
+    const lexerTokens = lexer(tokens);
+    const resultData = parser(lexerTokens);
+    console.log(JSON.stringify(resultData, null, 2))
+} catch (err){
+    console.log("ERROR : ",err.message)
+}

@@ -1,8 +1,13 @@
 // const str = "[1123, [2,[3]],'hello', 'world', null]";
-const str = "[1, [2,[3,[4,[5]]]],'hello', 'world', null]";
+// const str = "[1, [2,[3,[4,[5]]]],'hello', 'world', null]";
 // const str = '[123,"adfd",456]'
 // const str = "[123,'aaaddd',456]"
-const result = ArrayParser(str);
+
+const str1 = "[1, [2,[3,[4,[5]]]],'hello', 'world', null]"
+const str2 = "[[1,[2,[3],'hello']]"
+
+const result1 = ArrayParser(str1);
+const result2 = ArrayParser(str2);
 
 function ArrayParser(str){
     console.log(`input : ${str}`)
@@ -10,7 +15,8 @@ function ArrayParser(str){
     // console.log(str)
     
     if (!exception(str)){
-        return '//ERROR : "올바른 배열 형태가 아니네요.'
+        console.log('//ERROR : "올바른 배열 형태가 아니네요.')
+        // return '//ERROR : "올바른 배열 형태가 아니네요.'
         process.exit()
     }
     
