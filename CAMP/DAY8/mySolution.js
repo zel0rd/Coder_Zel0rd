@@ -18,8 +18,8 @@ class CPU {
         }
     }
     reset() {
-        this.Register = Array.from({ length: 7 }, () => 0);
-        PC = 0;
+        this.Register = Array.from({ length: 8 }, () => 0);
+        this.PC = undefined;
     }
     ALU(op1, op2, operator) {
         switch (operator) {
@@ -145,3 +145,15 @@ for (let i = 0; i < programs.length; i++) {
     }
     process.stdout.write('\n\n\n');
 }
+
+console.log("[[ reset ]] ")
+cpu.reset()
+for (let j = 1; j < 8; j++) {
+    process.stdout.write(` R${j} : ${cpu.Register[j]}, `);
+}
+process.stdout.write('\n\n\n');
+
+
+console.log("\n")
+cpu.load(programs)
+console.log("\n")
