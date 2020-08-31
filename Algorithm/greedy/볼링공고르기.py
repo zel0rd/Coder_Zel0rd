@@ -1,8 +1,14 @@
-N, K = map(int, input().split())
+import time
+ts = time.time()
 
-balls = list(map(int, input().split()))
-print(N,K)
-print(balls)
+# N, K = map(int, input().split())
+# balls = list(map(int, input().split()))
+
+N, K = 10, 5
+balls = [1,4,3,2,4,1,3,4,3,1]
+
+# print(N,K)
+# print(balls)
 
 count = 0
 
@@ -12,3 +18,4 @@ for i in range(len(balls)):
             count += 1
 
 print(count)
+print(time.time()-ts)
