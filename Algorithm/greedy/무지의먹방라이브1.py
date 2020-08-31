@@ -6,6 +6,7 @@ def solution(food_times, k):
     food_counts = len(food_times)
     while k != pos:
         if food_times[tic%food_counts] > 0:
+            food_times[tic%food_counts] -= 1
             pos += 1
         tic += 1
         if max(food_times) == 0:
