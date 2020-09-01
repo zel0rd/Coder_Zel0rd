@@ -1,3 +1,5 @@
 # gitignore
 
+# ignore folder
 Python_Selenium/gitignore
+TEST
