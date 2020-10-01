@@ -19,6 +19,7 @@ def func(a):
 
 def func2(a):
     return 'a가 10보다 크다' if a > 10 else 'a가 10보다 작다'
+    return 'a가 10보다 크다' if a > 10 else 'a가 10보다 작다'
 
 print(func(10))
 print(func2(10))
