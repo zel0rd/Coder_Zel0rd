@@ -4,6 +4,8 @@ const toDoList = document.querySelector(".js-toDOList")
 
 const TODOS_LS = "toDos"
 
+const toDos = [];
+
 function paintToDO(text){
     const li = document.createElement("li")
     const delBtn = document.createElement("button")
@@ -13,6 +15,10 @@ function paintToDO(text){
     li.appendChild(span)
     li.appendChild(delBtn)
     toDoList.appendChild(li);
+    const toDoObj = {
+        text: text
+        
+    }
 }
 
 
