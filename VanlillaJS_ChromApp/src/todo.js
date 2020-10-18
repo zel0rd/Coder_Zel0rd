@@ -7,7 +7,7 @@ const TODOS_LS = "toDos"
 function paintToDO(text){
     const li = document.createElement("li")
     const delBtn = document.createElement("button")
-    delBtn.innerHTML = "❌"
+    delBtn.innerText = "❌"
     const span = document.createElement("span")
     span.innerText = text
     li.appendChild(span)
