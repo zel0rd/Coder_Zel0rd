@@ -1,7 +1,7 @@
 const PI=3.14
 let sequence = [];
 
-function getArea(shape, length){
+function getArea(shape){
     if (shape === 'circle' && arguments.length == 2){
         let area = getCircle(arguments[1]);
         console.log("원 넓이는 :",area)
@@ -54,8 +54,6 @@ function printExecutionSequence(){
     console.log("계산수행순서 : ",sequence.join(", "))
     // return sequence.join(", ")
 }
-
-
 
 getArea("circle", 10);
 getArea("circle", 1,10);
