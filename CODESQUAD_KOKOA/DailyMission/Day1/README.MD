@@ -5,6 +5,7 @@
 getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
 
 ## CODE
+    
     const PI=3.14
     let sequence = [];
 
@@ -65,7 +66,10 @@ getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
     function printExecutionSequence(){
         // console.log("계산수행순서 : ",sequence.keys.join(", ")) 
         console.log("\n\n##### 계산수행순서 #####")
-        sequence.forEach(element => console.log(element.func, ":",element.result))
+        // sequence.forEach(element => console.log(element.func, ":",element.result))
+        sequence.forEach(function(element, index){
+            console.log(`${index+1}번째 [실행] : ${element.func} / [결과] : ${element.result}`)
+        })
         console.log("#######################\n")
         // return sequence.join(", ")
     }
