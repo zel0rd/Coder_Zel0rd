@@ -5,10 +5,11 @@
 getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
 
 ## CODE
+
     const PI=3.14
     let sequence = [];
 
-    function getArea(shape, length){
+    function getArea(shape){
         if (shape === 'circle' && arguments.length == 2){
             let area = getCircle(arguments[1]);
             console.log("원 넓이는 :",area)
@@ -62,8 +63,6 @@ getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
         // return sequence.join(", ")
     }
 
-
-
     getArea("circle", 10);
     getArea("circle", 1,10);
     getArea("rect", 5,10);
@@ -72,3 +71,16 @@ getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
 
 ## 수행결과
 ![](img1.png)
+
+
+## [미션] 다각형의 넓이 구하기
+1. getArea함수 만들기
+2. printExecutionSequence 함수만들기
+3. printExecutionSequence 함수 수정
+4. debug 기술문서 정리하기
+5. 학습 체크포인트
+    - Node.js를 통해서 JavaScript개발을 할 수 있다
+    - 함수의 역할은 한가지에 집중하고 있다.
+    - 일관된 변수명과 함수이름을 짓고 있다.
+    - 함수는 늘 동일한 입력값에 동일한 출력을 보장한다.
+    - 개발과정에서 breakpoint나 'debugger;' 키워드를 사용해서 디버깅을 했다.
