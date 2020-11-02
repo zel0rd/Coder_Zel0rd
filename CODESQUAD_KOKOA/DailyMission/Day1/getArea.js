@@ -58,7 +58,10 @@ function getTrape(length1, length2, length3){
 function printExecutionSequence(){
     // console.log("계산수행순서 : ",sequence.keys.join(", ")) 
     console.log("\n\n##### 계산수행순서 #####")
-    sequence.forEach(element => console.log(element.func, ":",element.result))
+    // sequence.forEach(element => console.log(element.func, ":",element.result))
+    sequence.forEach(function(element, index){
+        console.log(`${index+1}번째 [실행] : ${element.func} / [결과] : ${element.result}`)
+    })
     console.log("#######################\n")
     // return sequence.join(", ")
 }
