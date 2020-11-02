@@ -1,26 +1,31 @@
 const PI=3.14
 let sequence = [];
 
+function Logging(func, result){
+    this.func = func
+    this.result = result
+}
+
 function getArea(shape){
     if (shape === 'circle' && arguments.length == 2){
         let area = getCircle(arguments[1]);
         console.log("원 넓이는 :",area)
-        sequence.push('circle')
+        sequence.push(new Logging('circle', area))
     }
     if (shape === 'circle' && arguments.length == 3){
         let sum = getStepCircle(arguments[1],arguments[2])
         console.log("원 넓이의 합은 :", sum)
-        sequence.push('circle')
+        sequence.push(new Logging('circle', sum))
     }
     if (shape === 'rect' && arguments.length == 3){
         let area = getRect(arguments[1],arguments[2]);
         console.log("사각형의 넓이는 :",area);
-        sequence.push('rect');
+        sequence.push(new Logging('rect', area))
     }
     if (shape === 'trapezoid' && arguments.length == 4){
         let area = getTrape(arguments[1],arguments[2],arguments[3])
         console.log("사다리꼴의 넓이는 :",area)
-        sequence.push('trapezoid')
+        sequence.push(new Logging('trapezoid', area))
     }
 }
 
@@ -51,10 +56,14 @@ function getTrape(length1, length2, length3){
 
 // 계산수행 순서
 function printExecutionSequence(){
-    console.log("계산수행순서 : ",sequence.join(", "))
+    // console.log("계산수행순서 : ",sequence.keys.join(", ")) 
+    console.log("\n\n##### 계산수행순서 #####")
+    sequence.forEach(element => console.log(element.func, ":",element.result))
+    console.log("#######################\n")
     // return sequence.join(", ")
 }
 
+console.log("\n")
 getArea("circle", 10);
 getArea("circle", 1,10);
 getArea("rect", 5,10);
