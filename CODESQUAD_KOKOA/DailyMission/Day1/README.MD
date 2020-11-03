@@ -5,7 +5,7 @@
 getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
 
 ## CODE
-    
+``` javascript
     const PI=3.14
     let sequence = [];
 
@@ -80,7 +80,7 @@ getArea 함수를 만들어 여러 도형의 넓이를 구하여라.
     getArea("rect", 5,10);
     getArea("trapezoid", 5,10,4);
     printExecutionSequence();
-
+```
 
 ## 수행결과
 ![](img1.png)
