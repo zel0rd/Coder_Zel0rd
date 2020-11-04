@@ -8,7 +8,6 @@ import urllib.request
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
-TELEGRAM_TOKEN = "1143936612:AAGtTEf-E6-Utea_aTktd5MHlewWOp8-6I4"
 
 def send_message_to_user(text):
     updates = bot.getUpdates()
