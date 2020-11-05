@@ -21,14 +21,9 @@ function arrayToString(base, range, numOfPeople){
 // 문자열에서 차례에 해당하는 숫자를 배열로 리턴
 function getTurns(string, numOfPeople, turn){
     let result = [];
-    let realIndex = [];
-    let tempIndex = Array.from({ length: parseInt(string.length / numOfPeople) }, (_,i) => i * numOfPeople)
-
-    tempIndex.forEach(function(element, index){
-        realIndex.push(element + turn - 1)
-    })
-    
-    realIndex.forEach(function(element, index){
+    let index = Array.from({ length: parseInt(string.length / numOfPeople) }, (_,i) => i * numOfPeople).map(function(v){
+        return v + turn - 1
+    }).forEach(function(element, index){
         result.push(string[element])
     })
 
