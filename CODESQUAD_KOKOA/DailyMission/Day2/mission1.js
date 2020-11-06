@@ -6,19 +6,17 @@ function arrayToString(base, range, numOfPeople){
     decRange.forEach(function (n){
         result += n.toString(base)
     })
-
     return result
 }
 
 // 문자열에서 차례에 해당하는 숫자를 배열로 리턴
 function getTurns(string, numOfPeople, turn){
     let result = [];
-    let index = Array.from({ length: parseInt(string.length / numOfPeople) }, (_,i) => i * numOfPeople).map(function(v){
+    Array.from({ length: parseInt(string.length / numOfPeople) }, (_,i) => i * numOfPeople).map(function(v){
         return v + turn - 1
     }).forEach(function(element, index){
         result.push(string[element])
     })
-
     return result
 }
 
