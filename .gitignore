@@ -10,3 +10,5 @@ CODESQUAD_KOKOA/Lecture
 # git commit -m "Apply .gitignore"
 # git push
 Python_telegram/token.py
+CODESQUAD_KOKOA/Algorithm/Day1/node_modules/
+CODESQUAD_KOKOA/Algorithm/Day1/package-lock.json
