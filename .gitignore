@@ -3,9 +3,10 @@
 # ignore folder
 Python_Selenium/gitignore
 TEST
-
+CODESQUAD_KOKOA/Lecture
 # # git ignore apply code
 # git rm -r --cached .
 # git add .
 # git commit -m "Apply .gitignore"
 # git push
+Python_telegram/token.py
