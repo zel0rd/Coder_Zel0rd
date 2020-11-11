@@ -168,7 +168,7 @@ for(let key in data){
 
 ## 실행화면
 
-![](img1.png)
-![](img2.png)
-![](img3.png)
-![](img4.png)
+![](img/img1.png)
+![](img/img2.png)
+![](img/img3.png)
+![](img/img4.png)
