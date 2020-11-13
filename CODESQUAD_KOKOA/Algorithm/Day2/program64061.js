@@ -6,10 +6,9 @@ function getItems(board, index){
             item = board[i][index]
             board[i][index] = 0
             isItem = true
+            return item
         }
     }
-    if (isItem) return [board, item]
-    else return [board, undefined ]
 }
 
 function bomb(items){
@@ -26,22 +25,23 @@ function bomb(items){
 }
 
 function solution(board, moves) {
-    let item;
     let result = 0;
-    let count = 0;
     let items = [];
     moves.forEach(function (index) {
-        // console.log(getItems(board, index-1))
-        [board, item] = getItems(board, index-1)
-        items.push(item)
+        // console.log(board, index) // board 알아서 변함
+        items.push(getItems(board, index-1))
     })
+    // console.log(board)
+    // console.log(items)
     
     while (bomb(items)[1]){
-        count = bomb(items)[1]
-        items = bomb(items)[0]
+        [items, count] = bomb(items)
         result += count
     }
+    // console.log(items)
+    
     return result
 }
 
-console.log(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]],[1,5,3,5,1,2,1,4]))
+
+console.log(solution([[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]],[1,5,3,5,1,4,2,1,1,1]))
