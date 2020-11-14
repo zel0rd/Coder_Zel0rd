@@ -18,6 +18,7 @@ function bomb(items){
         if(items[i] === items[i-1]){
             items.splice(i-1,1)
             items.splice(i-1,1)
+            i = item.lengths - 1
             count += 2
         }
     }
