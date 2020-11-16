@@ -1,0 +1,82 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 0;
+    margin:0;
+}
+
+header {
+    background-color: black;
+    color: darkgrey;
+    grid-area: header;
+    font-size: 2rem;
+    font-weight: 900;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+        
+#main {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#js-toDoForm {
+    width: 80%;
+}
+input{
+    width: 30%;
+    border-radius: 8px;
+    margin: .5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+input[type='submit'] { 
+    border-radius: 8px;
+    background-color: chocolate;
+    color: #ffffff;
+    width: 7%;
+    margin: .5rem;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+
+[type='checkbox'] {
+    width: 1rem;
+}
+
+[type='checkbox']:checked {
+    opacity: 0.5;
+}
+[type='checkbox']:checked + span {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
+
+
+.message{
+    color:red;
+    margin: 0px auto;
+    width: 80%;
+    text-align: left;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+}
+
+span{
+    background-color:inherit;
+    display: inline-block;
+    margin: .5rem;
+    width: 50%;
+}
+
+ul{ 
+    list-style-type: none;
+    border-radius: 8px;
+    margin: 1rem auto;
+    width: 38%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
