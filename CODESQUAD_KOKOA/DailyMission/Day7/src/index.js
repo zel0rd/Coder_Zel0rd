@@ -50,12 +50,12 @@ function createQuerySelector(){
   btn4 = document.querySelector("#btn4")
   btn5 = document.querySelector("#btn5")
 
-  btn0.addEventListener("mouseenter", function() {handleEnterCount(1)});
-  btn1.addEventListener("mouseenter", function() {handleEnterCount(2)});
-  btn2.addEventListener("mouseenter", function() {handleEnterCount(3)});
-  btn3.addEventListener("mouseenter", function() {handleEnterCount(4)});
-  btn4.addEventListener("mouseenter", function() {handleEnterCount(5)});
-  btn5.addEventListener("mouseenter", function() {handleEnterCount(6)});
+  btn0.addEventListener("mouseenter", function() {handleEnterCount(0)});
+  btn1.addEventListener("mouseenter", function() {handleEnterCount(1)});
+  btn2.addEventListener("mouseenter", function() {handleEnterCount(2)});
+  btn3.addEventListener("mouseenter", function() {handleEnterCount(3)});
+  btn4.addEventListener("mouseenter", function() {handleEnterCount(4)});
+  btn5.addEventListener("mouseenter", function() {handleEnterCount(5)});
 
   btn0.addEventListener("mouseleave", handleLeaveCount);
   btn1.addEventListener("mouseleave", handleLeaveCount);
