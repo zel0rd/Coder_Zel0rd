@@ -67,9 +67,9 @@ function createQuerySelector(){
 
 function handleEnter() {
   console.log('mouse enter')
-  if (printed !== true){
+  // if (printed !== true){
     printed = setTimeout(printButtons, 1000);
-  }
+  // }
 }
 
 function handleLeave() {
