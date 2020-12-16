@@ -1,16 +1,14 @@
 const mainBtn = document.querySelector("#mainBtn");
 
-console.log(mainBtn)
-
-function displayMap(){
-
-}
-
 function createVallege(){
 
 }
 
 function assignMailBox(){
+    
+}
+
+function displayVallege(){
     
 }
 
