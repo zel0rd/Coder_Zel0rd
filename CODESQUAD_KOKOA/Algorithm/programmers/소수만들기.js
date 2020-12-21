@@ -23,13 +23,19 @@ function getArrSum(arr){
 }
 
 function isPrime(num){
-
+    if (num === 1) return false;
+    if (num === 2) return true;
+    let size = Math.ceil(Math.sqrt(num));
+    for (let i = 2; i <= size; i++){
+        if (num % i === 0) return false;
+    }
+    return true;
 }
 
 function main(arr){
     let combiArr = getCombination(arr,3)
     let result = combiArr.filter( (v) => isPrime(getArrSum(v) ))
-    
+    console.log(result)
     return result.length
 }
 
