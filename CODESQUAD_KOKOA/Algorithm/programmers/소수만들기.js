@@ -32,12 +32,8 @@ function isPrime(num){
     return true;
 }
 
-function main(arr){
-    let combiArr = getCombination(arr,3)
+function solution(nums) {
+    let combiArr = getCombination(nums,3)
     let result = combiArr.filter( (v) => isPrime(getArrSum(v) ))
-    console.log(result)
     return result.length
 }
-
-let arr1 = [1,2,3,4]
-main(arr1)
