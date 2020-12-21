@@ -4,8 +4,17 @@
 
 */
 
-function getCombination(arr){
+function getCombination(arr, selectNumber){
+    const results = []
+    if (selectNumber === 1) return arr.map((v) => [v])
 
+    arr.forEach( (fixed, index, origin) => {
+        const rest = origin.slice(index + 1);
+        const combinations = getCombination(rest, selectNumber - 1);
+        const attached = combinations.map( (combinations) => [fixed, ...combinations])
+        results.push(...attached)
+    })
+    return results
 }
 
 function getArrSum(arr){
@@ -16,8 +25,11 @@ function isPrime(num){
 
 }
 
-function main(){
-    let CombiArr = getCombination()
+function main(arr){
+    let CombiArr = getCombination(arr,3)
     let result = CombiArr.filter( (v) => isPrime(getArrSum(v) ))
     return result.length
 }
+
+let arr1 = [1,2,3,4]
+main(arr1)
