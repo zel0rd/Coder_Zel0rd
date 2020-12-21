@@ -18,7 +18,8 @@ function getCombination(arr, selectNumber){
 }
 
 function getArrSum(arr){
-
+    const reducer = (acc, cur) => acc + cur;
+    return arr.reduce(reducer)
 }
 
 function isPrime(num){
@@ -26,8 +27,9 @@ function isPrime(num){
 }
 
 function main(arr){
-    let CombiArr = getCombination(arr,3)
-    let result = CombiArr.filter( (v) => isPrime(getArrSum(v) ))
+    let combiArr = getCombination(arr,3)
+    let result = combiArr.filter( (v) => isPrime(getArrSum(v) ))
+    
     return result.length
 }
 
