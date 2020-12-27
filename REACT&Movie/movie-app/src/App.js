@@ -13,10 +13,10 @@ class App extends React.Component{
     this.setState({ movies, isLoading: false })
   }
   componentDidMount() {
-    // setTimeout(() => {
+    // setTimeout(() => {    
     //   this.setState({ isLoading: false })
     // }, 2000)
-    
+
     this.getMovies()
   }
   render() {
