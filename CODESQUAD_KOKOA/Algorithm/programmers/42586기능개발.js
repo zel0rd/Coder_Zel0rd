@@ -1,10 +1,8 @@
 function solution(progresses, speeds) {
     var answer = [];
-    let costDays = [];
-    for(let i = 0; i < progresses.length; i++){
-        costDays.push(Math.ceil((100 - progresses[i]) / speeds[i]))
-    }
+    let costDays = progresses.map((progress, index) => Math.ceil((100 - progress) / speeds[index]))
     // console.log(costDays)
+    
     let today = costDays[0];
     let temp = 0;
     costDays.map(function(v){
