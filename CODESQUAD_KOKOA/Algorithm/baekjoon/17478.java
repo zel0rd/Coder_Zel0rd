@@ -1,6 +1,8 @@
+package baekjoon;
+
 import java.util.Scanner;
 
-public class Main {
+public class BJ_P17478_재귀함수가뭔가요 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int times = sc.nextInt();
