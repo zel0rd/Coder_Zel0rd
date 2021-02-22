@@ -1,0 +1,12 @@
+ul {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+li {
+    width:60px;
+    height:60px;
+    list-style: none;
+}

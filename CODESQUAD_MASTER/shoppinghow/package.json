@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start-scss" : "sass --watch public/stylesheets/test.scss /public/stylesheets/test.css",
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
