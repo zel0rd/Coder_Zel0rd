@@ -120,8 +120,17 @@ span.ingredient {
   transform: translate(40%, 0%);
   width: 50%;
   height: 66px;
+
+  
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 16px;
+  padding-bottom: 2px;
 }
 .search_tab-rooms{
+  width:100%;
+  margin-left: 1rem;
   position: absolute;
   height: 64px;
   display: flex;
@@ -136,8 +145,31 @@ span.ingredient {
   display: flex;
   flex-direction: row;
 }
-.search_tab-element{width: 20%;}
+.search_tab-element{
+  margin:0.5rem;
+  width: 20%;
+  margin-top: 1rem;
 
+}
+
+.search_tab-inputbox{
+  border:none;
+  margin-top: 0.3rem;
+}
+
+.search_tab-element + .dropdown-divider{
+  margin-right: 1rem;
+}
+
+p {
+  margin-top: 0.3rem;
+  font-size: 14px ;
+  line-height: 18px ;
+  color: #717171;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+}
 
 .userBtn{
   width:85px;
