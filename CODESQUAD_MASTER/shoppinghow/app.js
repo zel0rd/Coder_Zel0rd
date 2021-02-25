@@ -21,17 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(
-//   sassMiddleware({
-//     src: path.join(__dirname, 'public'),
-//     dest: epath.join(__dirname, 'public'),
-//     indentedSyntax: false,
-//     sourceMap:true,
-//     outputStyle: 'compressed',
-//   })
-// )
-// app.use('/public', express.static(path.join(__dirname, 'public')))
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
