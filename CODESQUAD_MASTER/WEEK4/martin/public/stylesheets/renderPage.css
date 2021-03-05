@@ -1,0 +1,12 @@
+.renderPage {
+  display: flex;
+  flex-direction: row;
+}
+.renderPage .circleImg {
+  width: 50%;
+}
+.renderPage .arrowImg {
+  width: 30%;
+}
+
+/*# sourceMappingURL=renderPage.css.map */
