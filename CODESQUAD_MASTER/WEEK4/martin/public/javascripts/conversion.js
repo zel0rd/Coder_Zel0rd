@@ -11,7 +11,6 @@ const stringToHex = (str) => {
             .map((v) => v.charCodeAt(0).toString(16))
             .join("");
 }
-
 export { hexToString, stringToHex}
 
 

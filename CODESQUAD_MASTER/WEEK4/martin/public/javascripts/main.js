@@ -1,5 +1,6 @@
 import { _ } from './util.js';
 import { hexToString, stringToHex } from './conversion.js';
+import { test } from './fetch.js';
 
 const transceiver = _.$(".transceiver");
 const sendInfo = _.$('.sendInfo');

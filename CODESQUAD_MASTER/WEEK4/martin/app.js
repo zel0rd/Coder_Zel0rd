@@ -23,10 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+// CORS ALLOW
 app.use(function(req, res, next) {
-  next(createError(404));
-});
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
 
 // error handler
 app.use(function(err, req, res, next) {
