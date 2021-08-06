@@ -66,7 +66,6 @@ const editArticle = (id) => {
     document.querySelector("#edit__content").value = article.content;
 
     document.querySelector("#update").addEventListener("click", () => {
-      console.log("clicked");
       axios({
         method: "put",
         url: `https://api.t0dd.kr/v0/article/${id}`,
