@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./article.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="section1">
+            <h1>새 글 작성하기</h1>
+            <div id="post">
+                <p>작성자 : <input id="post__author" type="text"></p>
+                <p>제목 : <input id="post__title" type="text"></p>
+                <p>내용 : <input id="post__content" type="text">&nbsp; <button id="submit">제출</button></p>
+                
+            </div>
+            <div id="article">
+            </div>
+        </div>
+        <div class="section2">
+            <div id="edit">
+                <h1>글 수정하기</h1>
+                <p>작성자 : <input id="edit__author" type="text"></p>
+                <p>제목 : <input id="edit__title" type="text"></p>
+                <p>내용 : <input id="edit__content" type="text">&nbsp; <button id="update">수정</button></p>
+            </div>
+            <div id="explain">
+                <h1>사용방법</h1>
+                <h2>글 작성</h2>
+                <p>작성자, 제목, 내용을 입력하고 제출버튼을 누르세요.</p>
+                <h2>글 수정</h2>
+                <p>목록에서 원하는 제목을 누르고 수정버튼을 누르세요.</p>
+                <h2>글 삭제</h2>
+                <p>목록에서 원하는 글의 삭제버튼을 누르세요.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
