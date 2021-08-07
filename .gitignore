@@ -24,3 +24,5 @@ react_movie/movie_app/node_modules/*
 SPA2/node_modules/
 SPA2/dist/
 webpack_test/node_modules/
+.DS_Store
+VUE_STUDY/Week1/node_modules/
