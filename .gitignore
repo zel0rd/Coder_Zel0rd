@@ -27,3 +27,4 @@ webpack_test/node_modules/
 .DS_Store
 VUE_STUDY/Week1/node_modules/
 VUE_STUDY/Week2/test_vue/node_modules/
+VUE_STUDY/node_modules
