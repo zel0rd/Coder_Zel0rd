@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ message }}</h1>
+        <h1 @click="increase">{{count}}asdlfjl</h1>
     </div>
 </template>
 
@@ -8,9 +8,15 @@
     export default {
         data() {
             return {
-                message: "hello vue3!!"
+                count:0
+            }
+        },
+        methods: {
+            increase() {
+                this.count += 1
             }
         }
+        
     }
 </script>
 
