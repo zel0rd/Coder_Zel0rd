@@ -1,15 +1,11 @@
 const el = (tag) => document.createElement(tag);
 
-const deleteArticle = (_id) => {
-  axios.delete(`https://api.t0dd.kr/v0/article/${_id}`);
-  let articleDom = document.querySelector("#article");
-
-  setTimeout(() => {
-    renderArticle();
-  }, 100);
+const deleteArticle = async (_id) => {
+  await axios.delete(`https://api.t0dd.kr/v0/article/${_id}`);
+  await renderArticle();
 };
 
-const renderArticle = () => {
+const renderArticle = async () => {
   axios.get("https://api.t0dd.kr/v0/articles").then((response) => {
     let articleCount = response.data.count;
     axios
