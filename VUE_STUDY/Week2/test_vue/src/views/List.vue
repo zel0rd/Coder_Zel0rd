@@ -1,12 +1,9 @@
-
 <template>
     <div id="wrapper">
-        <div class="modal">
-            
-        </div>
+        <Modal />
         <div class="btn">
             <div class="postBtn" @click="$router.push('/post')">POST</div>
-            <div class="modalBtn">모달버튼</div>
+            <div class="modalBtn" @click="toggleModal">모달버튼</div>
         </div>
         <div class="container">
             <div class="row" v-for="row in lineCount" :key="row">
@@ -20,13 +17,15 @@
 
 <script>
     import axios from 'axios';
-    import Article from '@/components/Article.vue';
+    import Article from '@/components/Article';
+    import Modal from '@/components/Modal';
     export default {
-        components: { Article },
+        components: { Article, Modal },
         data: function () { 
             return {
                 articles: [],
                 lineCount: 4,
+                isModalActive: false
             }
         },
         beforeCreate() {
@@ -49,11 +48,12 @@
                 } else {
                     console.log("취소")
                 }
-            }   
+            },
+            toggleModal() {
+                this.isModalActive = this.isModalActive ? false : true;
+                console.log(this.isModalActive)
+            }
         },
-        components: {
-            Article,
-        }
     }
 </script>
 
@@ -65,17 +65,14 @@ $main-margin: 15px;
     font-family: 'NanumSquareRound',sans-serif;
     font-weight: 700;
 }
+
+h1 {
+    text-align: center;
+}
 #wrapper {
     width: 1000px;
 }
 
-.modal {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-}
 .btn {
     display: flex;
     flex-direction: row;
@@ -151,6 +148,14 @@ $main-margin: 15px;
     border-radius: 5px;
 }       
 
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
 .modalBtn {
     width: 40%;
     text-align: center;
@@ -159,4 +164,5 @@ $main-margin: 15px;
     background-color : rgba(0,0,0,.3);
     border-radius: 5px;
 }
+
 </style>
