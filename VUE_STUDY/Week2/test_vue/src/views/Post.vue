@@ -57,11 +57,21 @@
 </script>
 
 <style lang="scss" scoped>
+$main-margin: 15px;
+
+* {
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 700;
+    height: 100vh;
+}
+
+
 
 #wrapper {
     width: 700px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 input, textarea {
@@ -69,10 +79,9 @@ input, textarea {
 }
 
 .inputBox {
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0;
     padding-left: 10px;
-    border-radius: 1px solid red;
 }
 
 .title {
@@ -99,4 +108,6 @@ input, textarea {
     background-color : black;
     border-radius: 5px;
 }       
+
+
 </style>

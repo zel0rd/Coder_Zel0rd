@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="align-center">
-      <router-view></router-view>
-    </div>
+  <div class="align-center">
+    <router-view></router-view>
   </div>
 </template>
 
@@ -12,16 +10,28 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-div {
-  background-color: #e6e5ff;
+* {
+    font-family: 'NanumSquareRound',sans-serif;
+    font-weight: 700;
 }
+
+body {
+  margin: 0;
+}
+
 
 .align-center {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e6e5ff;
+}
+
+.container, .row {
+  background-color: #e6e5ff;
+
 }
 
 </style>

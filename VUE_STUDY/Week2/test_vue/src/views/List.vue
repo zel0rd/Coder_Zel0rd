@@ -1,17 +1,17 @@
 
 <template>
     <div id="wrapper">
-        <div class="postBtn" @click="$router.push('/post')">POST</div>
+        <div class="modal">
+            
+        </div>
+        <div class="btn">
+            <div class="postBtn" @click="$router.push('/post')">POST</div>
+            <div class="modalBtn">모달버튼</div>
+        </div>
         <div class="container">
             <div class="row" v-for="row in lineCount" :key="row">
                 <div class="article" v-for="(article, idx) in articles.filter( (v, i) => (i % lineCount) + 1 == row)" :key="idx" @click="$router.push(`/edit/${article._id}`)" @contextmenu="test(article._id)">
-                        <div class="title">{{ article.title }}</div>
-                        <div class="author">{{ article.author }}</div>
-                        <div class="content">{{ article.content }}</div>
-                        <div class="like__wrapper">
-                            <div class="like">아이콘 {{ article.like }}</div>
-                            <div class="dislike">아이콘 {{ article.dislike }}</div>
-                        </div>
+                    <Article :article="article" />
                 </div>
             </div>
         </div>
@@ -20,7 +20,9 @@
 
 <script>
     import axios from 'axios';
+    import Article from '@/components/Article.vue';
     export default {
+        components: { Article },
         data: function () { 
             return {
                 articles: [],
@@ -48,6 +50,9 @@
                     console.log("취소")
                 }
             }   
+        },
+        components: {
+            Article,
         }
     }
 </script>
@@ -62,6 +67,19 @@ $main-margin: 15px;
 }
 #wrapper {
     width: 1000px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .container {
     width: 100%;
@@ -122,7 +140,7 @@ $main-margin: 15px;
 }
 
 .postBtn {
-    width: 100%;
+    width: 40%;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -132,4 +150,13 @@ $main-margin: 15px;
     background-color : rgba(0,0,0,.3);
     border-radius: 5px;
 }       
+
+.modalBtn {
+    width: 40%;
+    text-align: center;
+    color:white;
+    line-height: 50px;
+    background-color : rgba(0,0,0,.3);
+    border-radius: 5px;
+}
 </style>
