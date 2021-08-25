@@ -1,9 +1,9 @@
 <template>
     <div id="wrapper">
-        <Modal />
+        <Modal :isModalActive="isModalActive"/>
         <div class="btn">
             <div class="postBtn" @click="$router.push('/post')">POST</div>
-            <div class="modalBtn" @click="toggleModal">모달버튼</div>
+            <div class="modalBtn" @click="toggleModal">모달버튼 {{ isModalActive }} </div>
         </div>
         <div class="container">
             <div class="row" v-for="row in lineCount" :key="row">
