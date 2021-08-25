@@ -59,16 +59,10 @@
 <style lang="scss" scoped>
 $main-margin: 15px;
 
-* {
-    font-family: 'NanumSquareRound',sans-serif;
-    font-weight: 700;
-    height: 100vh;
-}
-
-
 
 #wrapper {
     width: 700px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -11,6 +11,7 @@
 </script>
 
 <style lang="scss">
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
 
 * {
     font-family: 'NanumSquareRound',sans-serif;

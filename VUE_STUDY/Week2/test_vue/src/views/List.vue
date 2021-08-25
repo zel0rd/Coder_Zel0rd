@@ -60,11 +60,6 @@
 @import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
 $main-margin: 15px;
 
-* {
-    font-family: 'NanumSquareRound',sans-serif;
-    font-weight: 700;
-}
-
 h1 {
     text-align: center;
 }
