@@ -17,10 +17,12 @@
             <div :class="status">여기는 v-bind : {{ status }}</div>
             <div :[attr]="status">attr 적용하기 : {{ status }}</div>
         </div>
+        <Fruits />
     </div>
 </template>
 
 <script>
+    import Fruits from '~/components/Fruits' 
     export default {
         data() {
             return {
@@ -38,8 +40,10 @@
             changeStatus() {
                 this.status = this.status !== 'active' ? 'active' : 'deactive'
             }
+        },
+        components: {
+            Fruits
         }
-        
     }
 </script>
 
