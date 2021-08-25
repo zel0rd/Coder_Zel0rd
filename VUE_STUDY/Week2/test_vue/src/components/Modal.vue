@@ -1,7 +1,7 @@
 <template>
     <div class="modal" v-show="isModalActive">
         <div class="modalContents">
-            <span class="material-icons closeBtn" @click="toggleModal">close</span>
+            <span class="material-icons closeBtn" @click="update">close</span>
             <h1> 안녕하세요 모달입니다.</h1>
         </div>
         <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
@@ -11,19 +11,9 @@
 <script>
     export default {
         props: ['isModalActive'],
-        data() {
-            return {
-                // isModalActive: true
-            }
-        },
-        beforeCreate () {
-            console.log("TEST")
-        },
         methods : {
-            toggleModal() {
-                this.isModalActive = this.isModalActive ? false : true;
-                // console.log(isModalActive)
-                // this.$emit('isModalActive', this.isModalActive)
+            update() {
+                this.$emit('toggleModal', !this.isModalActive)
             }
         }
     }

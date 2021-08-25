@@ -1,9 +1,9 @@
 <template>
     <div id="wrapper">
-        <Modal :isModalActive="isModalActive"/>
+        <Modal :isModalActive="isModalActive" v-on:toggleModal="toggleModal"/>
         <div class="btn">
             <div class="postBtn" @click="$router.push('/post')">POST</div>
-            <div class="modalBtn" @click="toggleModal">모달버튼 {{ isModalActive }} </div>
+            <div class="modalBtn" @click="toggleModal">모달버튼 [상태 : {{ isModalActive }}] </div>
         </div>
         <div class="container">
             <div class="row" v-for="row in lineCount" :key="row">
@@ -51,8 +51,7 @@
             },
             toggleModal() {
                 this.isModalActive = this.isModalActive ? false : true;
-                console.log(this.isModalActive)
-            }
+            },
         },
     }
 </script>
