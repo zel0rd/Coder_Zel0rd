@@ -1,0 +1,36 @@
+table, td {
+    border: 1px solid red;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#explain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: aquamarine;
+}

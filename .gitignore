@@ -21,5 +21,15 @@ CODESQUAD_MASTER/node_modules/*
 CODESQUAD_MASTER/shoppinghow/node_modules/*
 CODESQUAD_MASTER/WEEK4/martin/node_modules/
 react_movie/movie_app/node_modules/*
-
+SPA2/node_modules/
+SPA2/dist/
+webpack_test/node_modules/
 .DS_Store
+VUE_STUDY/Week1/node_modules/
+
+VUE_STUDY/Week2/test_vue/node_modules/
+VUE_STUDY/node_modules
+
+VUE_STUDY/node_modules
+VUE_STUDY/Week2/node_modules
+VUE_STUDY/node_modules/*
