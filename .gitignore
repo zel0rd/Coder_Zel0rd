@@ -21,3 +21,5 @@ CODESQUAD_MASTER/node_modules/*
 CODESQUAD_MASTER/shoppinghow/node_modules/*
 CODESQUAD_MASTER/WEEK4/martin/node_modules/
 react_movie/movie_app/node_modules/*
+
+.DS_Store
